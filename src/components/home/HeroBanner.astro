@@ -1,0 +1,22 @@
+---
+import Image from 'astro/components/Image.astro';
+import type { HomeConfig } from '@app-types/config';
+
+interface Props {
+    heroBannerData: HomeConfig;
+}
+const { heroBannerData } = Astro.props as Props;
+---
+
+<section class="hero__banner__section py-[80px] bg-[var(--octonary-color)]">
+    <div class="container">
+        <div class="flex items-center justify-between gap-[80px]">
+            <div class="w-full max-w-[500px]">
+                <div class="prose prose-h1:text-4xl prose-h1:font-bold prose-p:text-lg prose-p:font-medium prose-p:leading-normal prose-p:mb-0" set:html={`${heroBannerData.hero.title} ${heroBannerData.hero.description}`}></div>
+            </div>
+            <figure class="w-full">
+                <Image src={heroBannerData.hero.heroImage.url} alt={heroBannerData.hero.heroImage.alt} width={heroBannerData.hero.heroImage.width} height={heroBannerData.hero.heroImage.height} loading="eager" fetchpriority="high" class="w-full h-auto object-cover" />
+            </figure>
+        </div>
+    </div>
+</section>

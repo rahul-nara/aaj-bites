@@ -1,0 +1,54 @@
+@font-face {
+font-family: 'Inter';
+src: url('/fonts/inter/inter-regular.woff2') format('woff2');
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Inter';
+src: url('/fonts/inter/inter-medium.woff2') format('woff2');
+font-style: normal;
+font-weight: 500;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Inter';
+src: url('/fonts/inter/inter-semibold.woff2') format('woff2');
+font-style: normal;
+font-weight: 600;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Inter';
+src: url('/fonts/inter/inter-bold.woff2') format('woff2');
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Inter';
+src: url('/fonts/inter/inter-extrabold.woff2') format('woff2');
+font-style: normal;
+font-weight: 800;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Baskervville';
+src: url('/fonts/baskervville/baskervville-regular-webfont.woff2') format('woff2');
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+}
+@font-face {
+font-family: 'Baskervville';
+src: url('/fonts/baskervville/baskervville-italic-webfont.woff2') format('woff2');
+font-style: italic;
+font-weight: 400;
+font-display: swap;
+}

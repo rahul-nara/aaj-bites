@@ -1,0 +1,53 @@
+
+{
+    "id": "Aaj Bites",
+    "title": "Aaj Bites",
+    "description": "Aaj Bites",
+    "faviconUrl": "/assets/favicon.ico",
+    "theme": "light",
+    "logo": {
+        "url": "/assets/en-logo.png",
+        "width": 120,
+        "height": 120,
+        "mobileWidth": 80,
+        "mobileHeight": 80,
+        "alt": "Aaj Bites"
+    },
+    "header": {
+        "links": [
+            {
+                "label": "Home",
+                "url": "/"
+            },
+            {
+                "label": "About Us",
+                "url": "/#about-us"
+            },
+            {
+                "label": "Contact Us",
+                "url": "/#contact-us"
+            }
+        ]
+    },
+    "footer": {
+        "logo": {
+            "url": "/assets/en-white-logo.png",
+            "width": 150,
+            "height": 150,
+            "mobileWidth": 100,
+            "mobileHeight": 100,
+            "alt": "Aaj Bites"
+        },
+        "footerContent": "<h3>Fresh Today. Every Day.</h3><p>Serving delicious, freshly prepared meals from our cloud kitchen straight to your doorstep. Quality ingredients, hygienic preparation, and flavors you'll love — every single day.</p>",
+        "copyright": "© Aaj Bites 2026. All rights reserved.",
+        "email": "info@aajbites.com",
+        "phone": "+91 9876543210",
+        "socialLinks": [],
+        "navigation": [
+            {
+                "label": "Privacy Policy",
+                "url": "/privacy-policy"
+            }
+        ]
+    }
+}

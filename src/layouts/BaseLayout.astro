@@ -1,0 +1,34 @@
+---
+import "@styles/global.css";
+import Header from "@components/global/Header.astro";
+import Footer from "@components/global/Footer.astro";
+
+const { title, description, siteConfig } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme={siteConfig.theme}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		{description && <meta name="description" content={description} />}
+		<link rel="icon" type="image/svg+xml" href={siteConfig.faviconUrl} />
+		<link rel="apple-touch-icon" href={siteConfig.faviconUrl} />
+		<link rel="canonical" href={Astro.url.origin + Astro.url.pathname} />
+		<meta name="theme-color" content="#ffffff" />
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/inter/inter-regular.woff2" crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/inter/inter-medium.woff2" crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/inter/inter-bold.woff2" crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/baskervville/baskervville-regular-webfont.woff2" crossorigin />
+	</head>
+  
+	<body class="body text-[var(--text-primary)] font-normal antialiased overflow-x-hidden">
+	<Header siteConfig={siteConfig} />
+	  <main class="main">
+		<slot />
+	  </main>
+	  <Footer siteConfig={siteConfig} />
+	</body>
+</html>

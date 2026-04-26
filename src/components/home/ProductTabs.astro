@@ -1,0 +1,71 @@
+---
+import Image from 'astro/components/Image.astro';
+import type { HomeConfig } from '@app-types/config';
+import StarRating from "@components/global/StarRating.astro";
+
+interface Props {
+    productsData: HomeConfig['products'];
+    productCtaLabel: string;
+}
+const { productsData, productCtaLabel } = Astro.props as Props;
+---
+
+<section class="product__tabs__section py-[40px]">
+    <div class="container">
+        <div class="tabs__wrapper">
+            <div class="tabs__title__wrapper prose max-w-[700px] mx-auto text-center mb-[40px] prose-h2:text-5xl prose-h2:font-bold prose-h2:mb-[8px] prose-p:text-xl prose-p:font-medium prose-p:leading-normal prose-p:mb-0" set:html={`${productsData.title} ${productsData.description}`}></div>
+            <div class="tabs__list__wrapper overflow-x-auto">
+                <ul class="tabs__list flex gap-[10px]" role="tablist" aria-label="Product categories">
+                    {productsData.tabs.map((tab, index) => (
+                        <li class="tabs__list__item" role="presentation">
+                            <button
+                                type="button"
+                                role="tab"
+                                id={`product-tab-btn-${index}`}
+                                aria-controls={`product-tab-panel-${index}`}
+                                aria-selected={index === 0}
+                                class:list={[
+                                    "tabs__list__item__button bg-[var(--septenary-color)] rounded-[4px] p-[10px] cursor-pointer text-base font-medium text-[var(--primary-color)] hover:bg-[var(--secondary-color)] hover:text-white transition-all duration-300",
+                                    { "is-active": index === 0 },
+                                ]}
+                                data-tab-index={index}
+                            >
+                                {tab.tabTitle}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div class="tabs__content relative overflow-hidden py-[20px]">
+                <div class="tabs__content__items__wrapper">
+                    {productsData.tabs.map((tab, index) => (
+                        <div class:list={["tabs__content__items flex gap-[20px] relative overflow-hidden flex-wrap",{ "is-active": index === 0 },]} role="tabpanel" id={`product-tab-panel-${index}`} aria-labelledby={`product-tab-btn-${index}`} hidden={index !== 0} data-tab-index={index}>
+                            {tab.products.map((product) => (
+                                <div class="tabs__content__item flex justify-between flex-col w-[calc(25%-20px)] border border-[var(--quinary-color)] rounded-[10px] group">
+                                    <figure class="w-full relative">
+                                        <Image src={product.image.url} alt={product.image.alt} width={product.image.width} height={product.image.height} loading="eager" fetchpriority="high" class="w-full h-auto object-cover rounded-t-[10px] border-b border-b-[3px] border-[var(--secondary-color)]" />
+                                        <a href={`#`} target="_blank" rel="noopener noreferrer" class="cta__link absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300"><span class="text-base font-medium leading-normal text-white p-[10px] bg-[var(--secondary-color)] rounded-[10px]">{productCtaLabel}</span></a>
+                                    </figure>
+                                    <div class="tabs__content__item__content p-[15px] flex flex-col justify-between h-full">
+                                        <div class="relative">
+                                            <h3 class="mb-[10px]">{product.title}</h3>
+                                            <p class="text-base font-medium leading-normal mb-[10px]">{product.description}</p>
+                                        </div>
+                                        <div class="flex justify-between items-center gap-[5px]">
+                                            <span class="text-base font-medium leading-normal">{product.price}</span>
+                                            <StarRating rating={product.rating} />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+	import { initProductTabs } from "../../scripts/productTabs";
+	initProductTabs();
+</script>

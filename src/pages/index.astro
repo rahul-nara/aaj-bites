@@ -1,0 +1,17 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import { homeConfig, siteConfig } from "@utils/json-provider";
+import HeroBanner from "@components/home/HeroBanner.astro";
+import AboutUsSection from "@components/home/AboutUsSection.astro";
+import ProductTabs from "@components/home/ProductTabs.astro";
+import WhyChooseUs from "@components/home/WhyChooseUs.astro";
+import ContactForm from "@components/home/ContactForm.astro";
+---
+
+<PageLayout siteConfig={siteConfig} title={homeConfig.meta.title} description={homeConfig.meta.description}>
+	<HeroBanner heroBannerData={homeConfig} />
+	<AboutUsSection aboutUsData={homeConfig.aboutUs} />
+	<ProductTabs productsData={homeConfig.products} productCtaLabel={homeConfig.productOrder.ctaLabel} />
+	<WhyChooseUs whyChooseUsData={homeConfig.whyChooseUs} />
+	<ContactForm contactFormData={homeConfig.contactForm} />
+</PageLayout>

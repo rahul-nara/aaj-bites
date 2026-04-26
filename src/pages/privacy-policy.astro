@@ -1,0 +1,18 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import { siteConfig, privacyPolicyConfig } from "@utils/json-provider";
+
+const { meta, privacyPolicy } = privacyPolicyConfig;
+---
+
+<PageLayout siteConfig={siteConfig} title={meta.title} description={meta.description}>
+    <section class="lg:pt-[30px] lg:pb-[70px] py-[30px] relative overflow-hidden">
+        <div class="container">
+            <div class="static__page__wrapper">
+                <small class="flex justify-start items-center gap-[10px] text-base leading-[1.2] text-[var(--primary-color)] mb-[25px]"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2V5" class="stroke-[var(--primary-color)]" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 2V5" class="stroke-[var(--primary-color)]" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 9.09H20.5" class="stroke-[var(--primary-color)]" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" class="stroke-[var(--primary-color)]" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.6947 13.7H15.7037" class="stroke-[var(--primary-color)]" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.6947 16.7H15.7037" class="stroke-[var(--primary-color)]" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.9955 13.7H12.0045" class="stroke-[var(--primary-color)]" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.9955 16.7H12.0045" class="stroke-[var(--primary-color)]" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.29431 13.7H8.30329" class="stroke-[var(--primary-color)]" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.29431 16.7H8.30329" class="stroke-[var(--primary-color)]" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <span class="text-[var(--primary-color)] [&strong]:font-bold" set:html={privacyPolicy.date}></span></small>
+                <article class="static__page__content prose max-w-none prose-headings:text-[var(--primary-color)] prose-p:text-[var(--text-primary)] prose-a:text-[var(--primary-color)] prose-a:font-bold prose-a:underline prose-p:text-sm prose-a:text-sm prose-ul:list-[disc] prose-ul:pl-4 prose-li:text-sm prose-li:text-[var(--text-primary)] prose-li:marker:text-[var(--text-primary)] [&_li_p]:m-0 [&_li_p]:text-sm prose-table:w-full prose-table:border prose-table:border-[var(--border-default)] prose-table:!border-collapse prose-th:border prose-th:border-[var(--border-default)] prose-td:border prose-td:border-[var(--border-default)] prose-th:bg-[var(--bg-surface)] prose-th:text-left prose-th:py-[16px] prose-th:px-4 prose-td:py-[16px] prose-td:px-4 prose-tr:border-0" set:html={`${privacyPolicy.title ?? ""}${privacyPolicy.content}`}>
+                </article>
+            </div>
+        </div>
+    </section>
+</PageLayout>

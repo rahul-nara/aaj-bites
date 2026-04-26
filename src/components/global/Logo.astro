@@ -1,0 +1,14 @@
+---
+import type { SiteConfig } from '@app-types/config';
+type LogoProps = {
+  logo: SiteConfig["logo"];
+  href?: string;
+  className?: string;
+  priority?: boolean;
+};
+const {logo, href = "/", className = "", priority = false} = Astro.props as LogoProps;
+---
+
+<a href={href} class={`logo relative block ${className}`} style={`--logo-mobile-width: ${logo.mobileWidth}px; --logo-mobile-height: ${logo.mobileHeight}px; --logo-desktop-width: ${logo.width}px; --logo-desktop-height: ${logo.height}px;`}>
+    <img src={logo.url} alt={logo.alt} width={logo.width} height={logo.height} loading={priority ? "eager" : "lazy"} fetchpriority={priority ? "high" : "auto"} class="w-full h-full object-contain" />
+</a>

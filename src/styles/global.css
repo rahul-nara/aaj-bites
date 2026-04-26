@@ -1,0 +1,41 @@
+
+:root {
+    --primary-color: #1A1A1A;
+    --secondary-color: #F36523;
+    --tertiary-color: #5A6EF2;
+    --quaternary-color: #FFFFFF;
+    --quinary-color: #dee3e8;
+    --septenary-color: #f2f2f2;
+    --octonary-color: #e3f3ff;
+    --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-baskervville: 'Baskervville', serif;
+}
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import "./fonts.css";
+
+
+body {font-family: var(--font-inter);}
+
+.container{width: 100%; max-width: 1330px; margin: 0 auto;padding: 0 1rem;}
+
+@layer base {
+    h1 {@apply text-[30px] md:text-[50px] lg:text-[70px] font-semibold leading-[1.2];font-family: var(--font-baskervville);font-style: italic;}
+    h2 {@apply text-3xl lg:text-5xl font-semibold leading-[1.2];font-family: var(--font-baskervville);font-style: italic;}
+    h3 {@apply text-lg md:text-[22px] font-bold leading-[1.3];font-family: var(--font-baskervville);font-style: italic;}
+    strong{ @apply font-bold;}
+}
+
+@layer utilities {
+    .product__tabs__section .tabs__list__item__button.is-active {background-color: var(--secondary-color);color: var(--quaternary-color);}
+}
+
+.prose table{min-width: 600px;}
+.static__page__content h3{@apply text-lg md:text-[24px] font-medium leading-[1.2];}
+
+.logo {width: var(--logo-mobile-width);height: var(--logo-mobile-height);}
+
+@media (min-width: 1024px) {
+.logo {width: var(--logo-desktop-width);height: var(--logo-desktop-height);}
+}

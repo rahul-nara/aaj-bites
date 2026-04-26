@@ -1,0 +1,22 @@
+---
+import Logo from "@components/global/Logo.astro";
+import type { SiteConfig } from '@app-types/config';
+
+type HeaderProps = {
+    siteConfig: SiteConfig;
+}
+const { siteConfig } = Astro.props as HeaderProps;
+---
+
+<header class="bg-white border-b border-[var(--quinary-color)]">
+    <div class="container">
+        <div class="flex items-center justify-between py-[15px]">
+            <Logo logo={siteConfig.logo} href="/" priority={false} />
+            <nav class="flex items-center gap-4">
+                {siteConfig.header.links.map((link) => (
+                    <a href={link.url} class="text-black text-base font-bold hover:text-[var(--secondary-color)]" title={link.label}>{link.label}</a>
+                ))}
+            </nav>
+        </div>
+    </div>
+</header>

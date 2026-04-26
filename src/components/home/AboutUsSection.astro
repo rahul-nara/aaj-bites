@@ -1,0 +1,22 @@
+---
+import Image from 'astro/components/Image.astro';
+import type { HomeConfig } from '@app-types/config';
+
+interface Props {
+    aboutUsData: HomeConfig['aboutUs'];
+}
+const { aboutUsData } = Astro.props as Props;
+---
+
+<section class="about__us__section py-[40px] bg-[var(--septenary-color)]" id="about-us" aria-label="About Us">
+    <div class="container">
+        <div class="flex items-center justify-between flex-row-reverse gap-[80px]">
+            <div class="w-full">
+                <div class="prose prose-h1:text-4xl prose-h1:font-bold prose-p:text-lg prose-p:font-medium prose-p:leading-normal prose-p:mb-0" set:html={`${aboutUsData.title} ${aboutUsData.description}`}></div>
+            </div>
+            <figure class="w-full max-w-[450px]">
+                <Image src={aboutUsData.aboutUsImage.url} alt={aboutUsData.aboutUsImage.alt} width={aboutUsData.aboutUsImage.width} height={aboutUsData.aboutUsImage.height} loading="eager" fetchpriority="high" class="w-full h-auto object-cover" />
+            </figure>
+        </div>
+    </div>
+</section>

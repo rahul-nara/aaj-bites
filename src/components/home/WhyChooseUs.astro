@@ -1,0 +1,22 @@
+---
+import Image from 'astro/components/Image.astro';
+import type { HomeConfig } from '@app-types/config';
+
+interface Props {
+    whyChooseUsData: HomeConfig['whyChooseUs'];
+}
+const { whyChooseUsData } = Astro.props as Props;
+---
+
+<section class="about__us__section py-[40px] bg-[var(--septenary-color)]">
+    <div class="container">
+        <div class="flex items-center justify-between gap-[80px]">
+            <div class="w-full">
+                <div class="prose prose-h1:text-4xl prose-h1:font-bold prose-p:text-lg prose-p:font-medium prose-p:leading-normal prose-p:mb-0" set:html={`${whyChooseUsData.title} ${whyChooseUsData.description}`}></div>
+            </div>
+            <figure class="w-full max-w-[450px]">
+                <Image src={whyChooseUsData.whyChooseUsImage.url} alt={whyChooseUsData.whyChooseUsImage.alt} width={whyChooseUsData.whyChooseUsImage.width} height={whyChooseUsData.whyChooseUsImage.height} loading="eager" fetchpriority="high" class="w-full h-auto object-cover" />
+            </figure>
+        </div>
+    </div>
+</section>

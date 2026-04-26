@@ -1,0 +1,346 @@
+{
+    "id": "home",
+    "meta": {
+        "title": "Fresh Today. Every Day.",
+        "description": "Serving delicious, freshly prepared meals from our cloud kitchen straight to your doorstep. Quality ingredients, hygienic preparation, and flavors you'll love — every single day."
+    },
+    "hero": {
+        "title": "<h1>Crafted Fresh. Served Fast.</h1>",
+        "description": "<p>Experience the perfect blend of taste and quality with our freshly made dishes — straight from our kitchen to your home.</p>",
+        "heroImage": {
+            "url": "/assets/hero-banner-img.png",
+            "width": 626,
+            "height": 417,
+            "alt": "Crafted Fresh. Served Fast."
+        }
+    },
+    "aboutUs": {
+        "title": "<h2>Who We Are?</h2>",
+        "description": "<p>At Aaj Bites, we are a homegrown cloud kitchen passionate about serving fresh, flavorful, and affordable food every day.</p><p>What started as a small idea to deliver \"ghar jaisa taste\" has grown into a kitchen loved by foodies who crave quality and consistency.</p><p>Every dish is prepared with care, using fresh ingredients, balanced flavors, and a commitment to hygiene—so you enjoy food that feels both comforting and satisfying.</p><p>\"दररोज ताजं, चविष्ट आणि मनापासून बनवलेलं अन्न — हाच आमचा विश्वास.\"</p>",
+        "aboutUsImage": {
+            "url": "/assets/who-we-are-img.png",
+            "width": 626,
+            "height": 417,
+            "alt": "About Us"
+        }
+    },
+    "products": {
+        "title": "<h2>Our Products</h2>",
+        "description": "<p>We offer a wide range of products to choose from.</p>",
+        "tabs": [
+            {
+                "tabTitle": "Pizza Treats",
+                "products": [
+                    {
+                        "title": "Tandoori Paneer Pizza (6-inch)",
+                        "description": "Smoky tandoori paneer with capsicum, onion, and melted cheese on a soft crust.",
+                        "price": "₹180",
+                        "rating": 8.5,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    },
+                    {
+                        "title": "Tandoori Paneer Pizza (8-inch)",
+                        "description": "Loaded with spicy paneer tikka flavors, fresh veggies, and extra cheese for a bigger craving.",
+                        "price": "₹280",
+                        "rating": 9.5,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    },
+                    {
+                        "title": "Chicken Pizza (6-inch)",
+                        "description": "Juicy chicken chunks with tangy sauce and gooey cheese on a perfectly baked base.",
+                        "price": "₹180",
+                        "rating": 8.5,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    },
+                    {
+                        "title": "Chicken Pizza (8-inch)",
+                        "description": "A hearty pizza topped with seasoned chicken, veggies, and rich mozzarella cheese.",
+                        "price": "₹280",
+                        "rating": 8.5,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    }
+                ]
+            },
+            {
+                "tabTitle": "Homestyle Momos",
+                "products": [
+                    {
+                        "title": "Paneer Momos Kurkure",
+                        "description": "Crispy fried momos stuffed with soft paneer and spices, served with spicy chutney.",
+                        "price": "₹180",
+                        "rating": 9.5,
+                        "image": {
+                            "url": "/assets/momos-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    },
+                    {
+                        "title": "Paneer Momos Fry",
+                        "description": "Golden-fried momos with a delicious paneer filling and flavorful masala coating.",
+                        "price": "₹160",
+                        "rating": 8.5,
+                        "image": {
+                            "url": "/assets/momos-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    },
+                    {
+                        "title": "Paneer Steam",
+                        "description": "Soft steamed dumplings filled with seasoned paneer for a light and healthy bite.",
+                        "price": "₹120",
+                        "rating": 8.5,
+                        "image": {
+                            "url": "/assets/momos-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    },
+                    {
+                        "title": "Chicken Momos Kurkure",
+                        "description": "Crunchy outer layer with juicy chicken filling, perfect for spicy snack lovers.",
+                        "price": "₹180",
+                        "rating": 8.5,
+                        "image": {
+                            "url": "/assets/momos-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    },
+                    {
+                        "title": "Chicken Momos Fry",
+                        "description": "Pan-fried momos with tender chicken stuffing and a crispy finish.",
+                        "price": "₹160",
+                        "rating": 9.5,
+                        "image": {
+                            "url": "/assets/momos-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    },
+                    {
+                        "title": "Chicken Momos Steam",
+                        "description": "Classic steamed momos filled with juicy, flavorful chicken.",
+                        "price": "₹120",
+                        "rating": 8.5,
+                        "image": {
+                            "url": "/assets/momos-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    },
+                    {
+                        "title": "French Fries Periperi",
+                        "description": "Crispy fries tossed in spicy peri-peri seasoning for a bold kick.",
+                        "price": "₹150",
+                        "rating": 8.5,
+                        "image": {
+                            "url": "/assets/momos-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    },
+                    {
+                        "title": "French Fries Classic",
+                        "description": "Golden crispy fries lightly salted for the perfect anytime snack.",
+                        "price": "₹120",
+                        "rating": 8.5,
+                        "image": {
+                            "url": "/assets/momos-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Margherita Pizza"
+                        }
+                    }
+                ]
+            },
+            {
+                "tabTitle": "Sip & Chill",
+                "products": [
+                    {
+                        "title": "Strawberry Milkshake",
+                        "description": "Refreshing milkshake blended with sweet strawberries and creamy milk.",
+                        "price": "₹130",
+                        "rating": 9.8,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cold Coffee"
+                        }
+                    },
+                    {
+                        "title": "Cold Coffee",
+                        "description": "Chilled coffee blended with milk and ice for a smooth, energizing drink.",
+                        "price": "₹150",
+                        "rating": 9.8,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cold Coffee"
+                        }
+                    },
+                    {
+                        "title": "Blueberry Milkshake",
+                        "description": "Fruity blueberry shake with a rich and creamy texture.",
+                        "price": "₹130",
+                        "rating": 9.8,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cold Coffee"
+                        }
+                    },
+                    {
+                        "title": "Oreo Milkshake",
+                        "description": "Thick shake blended with Oreo cookies for a chocolaty crunch.",
+                        "price": "₹150",
+                        "rating": 9.8,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cold Coffee"
+                        }
+                    },
+                    {
+                        "title": "Hazelnuts Cold Coffee",
+                        "description": "Cold coffee infused with nutty hazelnut flavor and creamy goodness.",
+                        "price": "₹180",
+                        "rating": 9.8,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cold Coffee"
+                        }
+                    },
+                    {
+                        "title": "Black Current Milkshake",
+                        "description": "Tangy and sweet blackcurrant shake with a refreshing twist.",
+                        "price": "₹150",
+                        "rating": 9.8,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cold Coffee"
+                        }
+                    },
+                    {
+                        "title": "Chocolate Milkshake",
+                        "description": "Rich and creamy chocolate shake for true chocolate lovers.",
+                        "price": "₹180",
+                        "rating": 9.8,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cold Coffee"
+                        }
+                    },
+                    {
+                        "title": "Nutella Milkshake",
+                        "description": "Indulgent shake made with Nutella for a smooth, nutty sweetness.",
+                        "price": "₹180",
+                        "rating": 9.8,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cold Coffee"
+                        }
+                    },
+                    {
+                        "title": "Brownie Chocolate Milkshake",
+                        "description": "Chocolate shake blended with brownie chunks for extra indulgence.",
+                        "price": "₹170",
+                        "rating": 9.8,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cold Coffee"
+                        }
+                    },
+                    {
+                        "title": "Biscoff Milkshake",
+                        "description": "Creamy milkshake with the rich caramelized flavor of Biscoff.",
+                        "price": "₹180",
+                        "rating": 9.8,
+                        "image": {
+                            "url": "/assets/milkshake-img.jpg",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cold Coffee"
+                        }
+                    }
+                ]
+            },
+            {
+                "tabTitle": "Burgers & Sandwiches",
+                "products": [
+                    {
+                        "title": "Veg Burger",
+                        "description": "Crispy veg patty with fresh veggies and sauces in a soft toasted bun.",
+                        "price": "₹120",
+                        "rating": 8.7,
+                        "image": {
+                            "url": "/assets/burger-img.png",
+                            "width": 626,
+                            "height": 417,
+                            "alt": "Cheesy Veg Burger"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "whyChooseUs": {
+        "title": "<h2>Why Choose Us?</h2>",
+        "description": "<p>We focus on what truly matters—taste, quality, and trust. Every order is freshly prepared, never pre-made, ensuring you get the best flavors in every bite.</p><p>With a carefully crafted menu, consistent quality, and quick service, Aaj Bites is your go-to choice for delicious meals delivered right to your doorstep.</p><p>Whether it’s a quick snack or a full meal, we make sure it’s worth every bite.</p>",
+        "whyChooseUsImage": {
+            "url": "/assets/hero-banner-img.png",
+            "width": 626,
+            "height": 417,
+            "alt": "Why Choose Us?"
+        }
+    },
+    "contactForm": {
+        "title": "<h2>Contact Us</h2>",
+        "description": "<p>Craving something delicious or have a question about our menu? Reach out to us anytime! Whether it’s an order, feedback, or a special request, we’re here to serve you fresh and fast.</p>"
+    },
+    "productOrder": {
+        "ctaLabel": "Order Now"
+    }
+}

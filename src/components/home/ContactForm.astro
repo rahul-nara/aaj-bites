@@ -1,0 +1,41 @@
+---
+import type { HomeConfig } from '@app-types/config';
+
+interface Props {
+    contactFormData: HomeConfig['contactForm'];
+}
+const { contactFormData } = Astro.props as Props;
+---
+
+<section class="contact__form__section py-[60px] bg-[var(--octonary-color)]" id="contact-us" aria-label="Contact Us">
+    <div class="container">
+        <div class="tabs__title__wrapper prose max-w-[550px] mx-auto text-center mb-[40px] prose-h2:text-5xl prose-h2:font-bold prose-h2:mb-[8px] prose-p:text-base prose-p:font-medium prose-p:leading-normal prose-p:mb-0" set:html={`${contactFormData.title} ${contactFormData.description}`}></div>
+        <div class="w-full max-w-[550px] mx-auto">
+            <form id="contact__form" action="/api/contact" method="POST">
+                <div class="form__group mb-[15px] sm:mb-[30px] relative">
+                    <label for="contact_name" class="form__label text__color__primary text-sm block mb-[10px]">Full Name</label>
+                    <input type="text" id="contact_name" name="name" class="form__input border border-[var(--quinary-color)] bg-white rounded-[10px] sm:rounded-2xl px-[20px] py-[18px] text-sm font-medium placeholder-[#A0A0A0] text-[text__color__primary] w-full focus:border-[#FF5A5A] focus:border-dashed outline-none" placeholder="John Deo">
+                    <p class="error-message text-red-500 text-xs hidden absolute sm:bottom-[-20px] bottom-[-16px] left-0"></p>
+                </div>
+                <div class="form__group mb-[15px] sm:mb-[30px] relative">
+                    <label for="contact_email" class="form__label text__color__primary text-sm block mb-[10px]">Email Address</label>
+                    <input type="email" id="contact_email" name="email" class="form__input border border-[var(--quinary-color)] bg-white rounded-[10px] sm:rounded-2xl px-[20px] py-[18px] text-sm font-medium placeholder-[#A0A0A0] text-[text__color__primary] w-full focus:border-[#FF5A5A] focus:border-dashed outline-none" placeholder="john.d@samplemail.com">
+                    <p class="error-message text-red-500 text-xs hidden absolute sm:bottom-[-20px] bottom-[-16px] left-0"></p>
+                </div>
+                <div class="form__group mb-[15px] sm:mb-[30px] relative">
+                    <label for="contact_message" class="form__label text__color__primary text-sm block mb-[10px]">Message</label>
+                    <textarea id="contact_message" name="message" class="form__input border border-[var(--quinary-color)] bg-white rounded-[10px] sm:rounded-2xl px-[20px] py-[18px] text-sm font-medium placeholder-[#A0A0A0] text-[text__color__primary] w-full focus:border-[var(--secondary-color)] focus:border-dashed outline-none" rows="8" cols="30" placeholder="Type your Message..." minlength="10"></textarea>
+                    <p class="error-message text-red-500 text-xs hidden absolute sm:bottom-[-20px] bottom-[-12px] left-0"></p>
+                </div>
+                <div class="form__group__button">
+                    <button type="submit" class="text-sm font-bold border border-[var(--secondary-color)] bg-[var(--secondary-color)] rounded-full px-[30px] py-[12px] text-white transition cursor-pointer hover:bg-[var(--tertiary-color)] hover:border-[var(--tertiary-color)]">Submit</button>
+                </div>
+            </form>
+            <div id="contact__form__response" class="text-sm font-medium text-[var(--secondary-color)] hidden mt-[10px]"></div>
+        </div>
+    </div>
+</section>
+<script>
+  import initContactForm from '../../scripts/contactForm';
+  initContactForm();
+</script>

@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import type { SiteConfig } from "@app-types/config";
+
+interface Props {
+	siteConfig: SiteConfig;
+	title?: string;
+	description?: string;
+}
+
+const { siteConfig, title, description } = Astro.props as Props;
+---
+
+<BaseLayout title={title ?? siteConfig.title} description={description ?? siteConfig.description} siteConfig={siteConfig} >
+	<slot />
+</BaseLayout>
